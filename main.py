@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from encoders import farfallese
+from encoders import morse
 # Configurazione tema
 ctk.set_appearance_mode("System")  # "Dark" o "Light"
 ctk.set_default_color_theme("blue")
@@ -8,7 +9,7 @@ class TextCoderApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Text Coder App")
+        self.title("Codificatore")
         self.geometry("600x400")
 
         # Titolo
@@ -24,7 +25,7 @@ class TextCoderApp(ctk.CTk):
         # Scelta linguaggio
         self.lang_label = ctk.CTkLabel(self, text="Seleziona il linguaggio in codice:")
         self.lang_label.pack(pady=(10, 0))
-        self.lang_option = ctk.CTkOptionMenu(self, values=["Morse", "Cesare", "Reverse", "Farfallese"])
+        self.lang_option = ctk.CTkOptionMenu(self, values=["Morse", "Cesare", "Reverse", "Farfallese","Traduci Farfallese"])
         self.lang_option.pack(pady=5)
 
         # Bottone per tradurre
@@ -49,8 +50,12 @@ class TextCoderApp(ctk.CTk):
         # Logica di traduzione per i linguaggi
         if lang == "Farfallese":
             translated = farfallese.encode(text)
+        elif lang == "Traduci Farfallese":
+            translated = farfallese.decode(text)
         elif lang == "Reverse":
             translated = text[::-1]
+        elif lang == "Morse":
+            translated = morse.encode(text)
         else:
             translated = f"[{lang}] → (non ancora implementato)"
 

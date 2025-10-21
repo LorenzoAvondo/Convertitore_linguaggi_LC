@@ -25,7 +25,7 @@ def decode(text: str) -> str:
     while i < len(text):
         char = text[i]
         if(
-            char in vowels
+            char in vocali
             and i + 2 < len(text)
             and text[i + 1] == "f"
             and text[i + 2].lower() == char.lower()
