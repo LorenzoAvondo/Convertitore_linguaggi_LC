@@ -1,0 +1,46 @@
+# === Python base ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+MANIFEST
+
+# === Virtual environments ===
+venv/
+env/
+ENV/
+.venv/
+
+# === IDE / editor ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === Logs / cache ===
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# === App specific ===
+# Config files locali o segreti (se li aggiungi in futuro)
+config.yaml
+config.local.yaml
+
+# === Python installer ===
+*.spec
+
+# === Backup ===
+*.orig
+*.old
