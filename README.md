@@ -43,4 +43,4 @@ Distribuito sotto licenza MIT — vedi LICENSE
 
 Contatti
 
-Per domande o suggerimenti: tuo-email@example.com
+Per domande o suggerimenti: lory.avondo@gmail.com
